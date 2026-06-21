@@ -122,18 +122,18 @@ The frequency spectrum explicitly highlights the surgical eradication of the 50 
 ## 5. Repository Structure
 
 ```text
-ecg-signal-denoising-system/
+ecg-denoising-dsp/
 ├── assets/
-│   ├── pipeline.png          # Time-domain execution visualization
-│   └── spectrum.png          # FFT frequency analysis spectrum
-├── src/
-│   ├── ecg_generator.py      # Mathematical modeling of PQRST complexes
-│   ├── noise_adder.py        # Baseline wander, 50Hz hum, and EMG simulator
-│   ├── filters.py            # Butterworth/Notch configurations & SNR metrics
-│   └── visualizer.py         # Main execution script and plotting engine
-├── LICENSE                   # Open-source licensing documentation
-├── README.md                 # System documentation text
-└── requirements.txt          # Python dependency architecture
+│   ├── pipeline.png
+│   └── spectrum.png
+├── .gitignore
+├── README.md
+├── requirements.txt
+├── main.py
+├── ecg_generator.py
+├── noise_adder.py
+├── filters.py
+└── visualizer.py
 ```
 
 ---
