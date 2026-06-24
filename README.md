@@ -142,28 +142,33 @@ ecg-denoising-dsp/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/ecg-signal-denoising-system.git
-cd ecg-signal-denoising-system
+git clone https://github.com/suyashsrivastava-ee/ecg-denoising-dsp.git
+cd ecg-denoising-dsp
 ```
 
-### 2. Configure Environment and Dependencies
-It is highly recommended to isolate dependencies within a virtual environment:
-```bash
-# Create and activate environment
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+### 2. Install the dependencies
 
-# Install requirements
-pip install -r requirements.txt
-```
+It is a good idea to use a virtual environment so the project dependencies stay separate from the rest of your system.
 
-### 3. Run the Processing Engine
-Execute the visualization script to process the simulated data, compute system metrics, and output the tracking plots:
-```bash
-python src/visualizer.py
-```
+    python -m venv venv
 
-*Note: If you are running the project on a headless server setup or docker container and wish to suppress interactive window popups while storing files directly to disk, verify that `matplotlib.use('Agg')` is enabled within the visualization source code.*
+On Windows:
+
+    venv\Scripts\activate
+
+On macOS/Linux:
+
+    source venv/bin/activate
+
+Then install the required packages:
+
+    pip install -r requirements.txt
+
+### 3. Run the project
+
+    python main.py
+
+This will generate the synthetic ECG, add the simulated noise sources, apply the denoising pipeline, and save the result plots.
 
 ---
 
